@@ -1,10 +1,28 @@
 {
   "expo": {
-    "name": "heally",
+    "name": "Heally",
     "slug": "heally",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "userInterfaceStyle": "automatic",
+    "orientation": "portrait",
+    "ios": {
+      "supportsTablet": true,
+      "splash": {
+        "image": "./src/assets/splashDark.png",
+        "backgroundColor": "#000000",
+        "resizeMode": "contain"
+      }
+    },
+    "android": {
+      "package": "com.heally",
+      "splash": {
+        "image": "./src/assets/splashDark.png",
+        "backgroundColor": "#000000",
+        "resizeMode": "contain"
+      }
+    }
   }
 }
