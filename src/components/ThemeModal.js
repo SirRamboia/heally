@@ -1,11 +1,11 @@
+import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { Modalize } from "react-native-modalize";
 
 const ThemeModal = ({ modalRef, themeColors, handleThemeSelection }) => {
-    // Opções de seleção de tema
-    const themeOptions = [
+  // Opções de seleção de tema
+  const themeOptions = [
     {
       key: 1,
       value: "dark",
@@ -38,6 +38,7 @@ const ThemeModal = ({ modalRef, themeColors, handleThemeSelection }) => {
       color: themeColors.subheading,
       paddingBottom: 10,
       textAlign: "center",
+      fontFamily: "Rubik-Medium",
     },
     themeOption: {
       flexDirection: "row",
@@ -50,6 +51,7 @@ const ThemeModal = ({ modalRef, themeColors, handleThemeSelection }) => {
       fontSize: 17.5,
       fontWeight: "300",
       color: themeColors.text,
+      fontFamily: "Inter-Medium",
     },
     separator: {
       borderBottomColor: themeColors.separator,
@@ -60,11 +62,11 @@ const ThemeModal = ({ modalRef, themeColors, handleThemeSelection }) => {
 
   return (
     <Modalize
-      closeOnOverlayTap={true}
+      closeOnOverlayTap
       ref={modalRef}
       scrollViewProps={{ showsVerticalScrollIndicator: false }}
       adjustToContentHeight
-      withHandle={true}
+      withHandle
       modalStyle={{
         backgroundColor: themeColors.secondary,
         borderTopLeftRadius: 20,

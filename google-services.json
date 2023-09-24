@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "507929057533",
+    "project_id": "heallymain",
+    "storage_bucket": "heallymain.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507929057533:android:360dc756720d99d03fc694",
+        "android_client_info": {
+          "package_name": "com.heally"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507929057533-816nlpn6g2bvlocbgks5c5oadgc75qr3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.heally",
+            "certificate_hash": "fcc9963fa9abc1f12f37385465717d3d45c9cf5c"
+          }
+        },
+        {
+          "client_id": "507929057533-n504ekcv2ssfcojqs2bihk6uqpoi0jp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8cSkkMnoOY_SLPzUNB9vO6Yho0J5_CGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507929057533-n504ekcv2ssfcojqs2bihk6uqpoi0jp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

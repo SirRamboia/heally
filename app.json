@@ -18,11 +18,18 @@
     },
     "android": {
       "package": "com.heally",
+      "googleServicesFile": "./google-services.json",
       "splash": {
         "image": "./src/assets/splashDark.png",
         "backgroundColor": "#000000",
         "resizeMode": "contain"
       }
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "860df508-d7ab-478e-9705-9dcb2e1c7e22"
+      }
+    },
+    "owner": "heally"
   }
 }

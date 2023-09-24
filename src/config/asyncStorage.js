@@ -2,7 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Alert } from "react-native";
 
 export const storeData = async (key, value) => {
-  if (key && value){
+  if (key && value) {
     try {
       await AsyncStorage.setItem(key, value);
     } catch ({ message }) {
@@ -16,7 +16,10 @@ export const getData = async (key) => {
     const value = await AsyncStorage.getItem(key);
     return value != null ? value : null;
   } catch ({ message }) {
-    Alert.alert("An error occurred when retrieving data from the device", message);
+    Alert.alert(
+      "An error occurred when retrieving data from the device",
+      message,
+    );
   }
 };
 
@@ -27,21 +30,23 @@ export const removeItem = async (key) => {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export const clearAllData = async () => {
-    try {
-      await AsyncStorage.clear();
-      console.log('All local AsyncStorage deleted!');
-    } catch (error) {
-      console.log(error);
-    }
-}
+  try {
+    await AsyncStorage.clear();
+    console.log("All local AsyncStorage deleted!");
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const getAllData = async () => {
   try {
-    AsyncStorage.getAllKeys().then((keys)=> AsyncStorage.multiGet(keys).then((data) => console.log(data)));
+    AsyncStorage.getAllKeys().then((keys) =>
+      AsyncStorage.multiGet(keys).then((data) => console.log(data)),
+    );
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-}
+};

@@ -1,14 +1,11 @@
 import React, { useContext, useRef } from "react";
 import { Button, Text, StyleSheet, Appearance } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ThemeContext } from "../context/ThemeContext";
-import { colors } from "../config/theme";
+
 import ThemeModal from "../components/ThemeModal";
-import {
-  storeData,
-  removeItem,
-  getAllData,
-} from "../config/asyncStorage";
+import { storeData, removeItem, getAllData } from "../config/asyncStorage";
+import { colors } from "../config/theme";
+import { ThemeContext } from "../context/ThemeContext";
 
 const HomeScreen = () => {
   const { theme, updateTheme } = useContext(ThemeContext);
@@ -24,8 +21,10 @@ const HomeScreen = () => {
   }
 
   function handleThemeSelection(selectedTheme) {
-    updateTheme(selectedTheme == 'auto' ? Appearance.getColorScheme() : selectedTheme);
-    storeData("themeAuto", selectedTheme == 'auto' ? 'true' : 'false');
+    updateTheme(
+      selectedTheme === "auto" ? Appearance.getColorScheme() : selectedTheme,
+    );
+    storeData("themeAuto", selectedTheme === "auto" ? "true" : "false");
     closeModal();
   }
 
@@ -39,7 +38,7 @@ const HomeScreen = () => {
     text: {
       textAlign: "center",
       color: themeColors.text,
-    }
+    },
   });
 
   return (
@@ -55,7 +54,10 @@ const HomeScreen = () => {
 
       <Button onPress={() => getAllData()} title="Get all data" />
       <Button onPress={() => removeItem("theme")} title="Remove item 'theme'" />
-      <Button onPress={() => removeItem("themeAuto")} title="Remove item 'themeAuto'" />
+      <Button
+        onPress={() => removeItem("themeAuto")}
+        title="Remove item 'themeAuto'"
+      />
     </SafeAreaView>
   );
 };
